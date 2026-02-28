@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Advocacia Brizola - Assessoria jurídica especializada em Direito Empresarial, Civil e Trabalhista em São José dos Campos.">
+  <title>Advocacia Brizola</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+   --navy-deep: #0B1624;   
+  --navy-soft: #101F33;   
+  --navy-light: #162A44;  
+  --gold-soft: #B8A98A;
+  --text-light: #E5EAF0;
+  --transition: all 0.3s ease;
+}
+
+* { box-sizing: border-box; }
+
+.hero h1,
+.about h2,
+#servicos h2,
+.contact h2 {
+  font-weight: 200;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.hero h1::after,
+.about h2::after,
+#servicos h2::after,
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #B8A98A; 
+  margin-top: 20px;
+}
+
+#servicos h2::after,
+.contact h2::after {
+  margin: 20px auto 0;
+}
+
+.hero h1,
+#servicos h2,
+.about h2,
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: linear-gradient(
+  90deg,
+  #0C1624 0%,
+  #08121D 50%,
+  #050A14 100%
+);
+  color: #E8EDF4;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+header {
+  background: var(--navy-deep);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo img { height: 55px; }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-text strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: #FFFFFF;
+}
+
+/* BOTÕES */
+.cta {
+  background: var(--gold-soft);
+  color: var(--navy-deep);
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  gap: 50px;
+  padding: 100px 0;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 17px;
+  max-width: 500px;
+}
+
+/* SERVIÇOS */
+#servicos {
+  padding: 100px 0;
+  background: var(--navy-deep);
+}
+
+#servicos h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  border-left: 3px solid #B8A98A; /* barra dourada */
+  padding-left: 30px; /* espaço entre barra e texto */
+  margin-bottom: 50px; /* espaço entre os blocos */
+}
+
+.service h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.service p {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* SOBRE */
+.about {
+  display: grid;
+  gap: 60px;
+  padding: 100px 0;
+  align-items: center;
+}
+
+.about h2 {
+  font-weight: 300;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.about p {
+  color: var(--text-muted);
+}
+
+.about img {
+  width: 100%;
+  border-radius: 4px;
+  filter: grayscale(20%);
+}
+
+/* FORMULÁRIO */
+.contact {
+  padding: 100px 0;
+}
+
+form {
+background: rgba(255,255,255,0.03);
+  padding: 50px;
+  border-radius: 6px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.4s ease;
+}
+
+form:hover {
+  border: 1px solid #B8A98A; 
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  transform: translateY(-4px);
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  background: #0F1C2E;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #FFFFFF;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--gold-soft);
+  box-shadow: 
+    inset 0 0 8px rgba(184,169,138,0.25),
+    0 0 6px rgba(184,169,138,0.15);
+}
+
+form button {
+  background: var(--gold-soft);
+  color: var(--navy-deep);
+  width: 100%;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+footer {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--gold-soft);
+  color: var(--navy-deep);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1fr 1fr; }
+  .about { grid-template-columns: 1fr 1fr; }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Advocacia Brizola">
+        <div class="logo-text">
+          <strong>ADVOCACIA BRIZOLA</strong><br>
+          <span style="font-size:12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;">Assessoria Jurídica</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contato">Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Assessoria Jurídica Estratégica</h1>
+        <p>Soluções jurídicas com rigor técnico e foco em resultados. Defendemos seus interesses com ética e transparência desde 2008.</p>
+        <a class="cta" href="#contato">Fale com um especialista</a>
+      </div>
+      <div>
+        <img src="img/escritorio.jpg" alt="Escritório" style="width:100%; border-radius: 4px;">
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2 style="text-align: center; font-weight: 300; font-size: 32px;">Áreas de Atuação</h2>
+        <div class="services-grid">
+          <div class="service">
+            <h3>Direito Empresarial</h3>
+            <p>Consultoria societária, contratos complexos e compliance para o seu negócio crescer seguro.</p>
+          </div>
+          <div class="service">
+            <h3>Direito Civil</h3>
+            <p>Gestão de contratos, responsabilidade civil e soluções de conflitos com agilidade.</p>
+          </div>
+          <div class="service">
+            <h3>Direito Trabalhista</h3>
+            <p>Defesa estratégica em reclamações e consultoria preventiva para empregadores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container about">
+      <div>
+        <h2>Experiência e Dedicação</h2>
+        <p>Desde 2008, o escritório Brizola Advocacia combina tradição e inovação para oferecer soluções personalizadas.Temos sido o parceiro de empresas e indivíduos que buscam não apenas representação, mas soluções jurídicas eficazes para os seus desafios mais complexos</p>
+        <p>Prezamos pela proximidade com o cliente, garantindo que cada etapa do processo seja explicada de forma clara e honesta.</p>
+      </div>
+      <div>
+        <img src="img/advogados.png" alt="Equipe de advogados">
+      </div>
+    </section>
+
+    <section id="contato" class="container contact">
+      <h2 style="text-align: center; font-weight: 300;">Solicite um Atendimento</h2>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">📍 Av. Itabaiana, 1299 - Parque Industrial - São José dos Campos | 📞 (12) 99261-7410</p>
+      
+      <form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+        <label>Nome Completo</label>
+        <input type="text" placeholder="Ex: João Silva" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="seu@email.com" required>
+
+        <label>Mensagem</label>
+        <textarea rows="5" placeholder="Como podemos ajudar?" required></textarea>
+
+        <button type="submit">Enviar Solicitação</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © Advocacia Brizola — Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5512992617410" class="whatsapp-float" target="_blank">
+    WhatsApp
+  </a>
+
+</body>
+</html> 
